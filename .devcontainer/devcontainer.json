@@ -1,7 +1,7 @@
 {
-  "name": "jsp-basic",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "jsp-mysql",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "tomcat",
+  "workspaceFolder": "/workspaces/${containerWorkspaceFolderBasename}",
   "forwardPorts": [8080]
 }

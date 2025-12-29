@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  tomcat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ..:/workspaces/${containerWorkspaceFolderBasename}
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sampledb
+      MYSQL_USER: sample
+      MYSQL_PASSWORD: sample
