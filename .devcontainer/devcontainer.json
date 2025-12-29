@@ -1,0 +1,7 @@
+{
+  "name": "jsp-basic",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [8080]
+}
